@@ -152,6 +152,16 @@ node cli/makefun.mjs submit --competition <bounty-slug> \
 with an escrowed reward asks for. That wallet is where the reward will be paid. Your
 latest entry before the deadline is the one that counts, within the bounty's daily limit.
 
+After you submit, check where your entry stands:
+
+```sh
+node cli/makefun.mjs status
+```
+
+It shows **submitted**, **checked**, **scored** or **rejected**. A rejected entry lists every
+failed check together with its fix — apply the fixes and submit again before the deadline.
+Your entry's checks are also on its status page, `GET /api/submissions/<id>/status`.
+
 ## Step 7 — Claim your reward
 
 When results are posted and your entry has placed, you get a notification that your reward
